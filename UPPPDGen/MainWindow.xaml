@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UPPPDGen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TestWin" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock Text="TEST_WIN" FontSize="20"/>
+
+
+            <TextBox Text="" x:Name="targetText" Margin="10" FontSize="18"/>
+            
+
+            <StackPanel>
+                <StackPanel.Resources>
+                    <Style TargetType="CheckBox">
+                        <Setter Property="Margin" Value="10"/>
+                    </Style>
+                </StackPanel.Resources>
+                <CheckBox x:Name="indentleft" Foreground="Green" IsEnabled="True" Content="Сделать отступ" HorizontalAlignment="Left"/>
+                <CheckBox x:Name="justifytext" Foreground="Green" IsEnabled="True" Content="Сделать по ширине" HorizontalAlignment="Left"/>
+                <CheckBox x:Name="setfont" Foreground="Green" IsEnabled="True" Content="Сделать полторы строки" HorizontalAlignment="Left"/>
+                <CheckBox x:Name="indentline" Foreground="Red" IsEnabled="False" Content="Сделать полторы строки" HorizontalAlignment="Left"/>
+                
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Сохранить" Click="SaveButton_Click" HorizontalAlignment="Left" Margin="10"/>
+                <Button Content="Открыть" HorizontalAlignment="Left" Margin="10" Click="Button_Click"/>
+            </StackPanel>
+            
+        </StackPanel>
     </Grid>
 </Window>
